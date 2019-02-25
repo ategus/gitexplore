@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
+import theme from './theme';
 import './App.css';
-
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <section className="container">
+        <ReactiveBase
+          app="gitxplore-app"
+          credentials="4oaS4Srzi:f6966181-1eb4-443c-8e0e-b7f38e7bc316"
+          type="gitxplore-latest"
+          theme={theme}
+        >
+          <nav className="navbar">
+            <div className="title">GitXplore</div>
+          </nav>
+        </ReactiveBase>
+      </section>
     );
   }
 }
-
 export default App;
